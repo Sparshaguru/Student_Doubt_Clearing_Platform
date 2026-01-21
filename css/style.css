@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: radial-gradient(circle at top, #1a002b, #050008);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Jellyfish glow blobs */
+.blob {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #b026ff, transparent 70%);
+    filter: blur(90px);
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.blob1 { top: 10%; left: 10%; }
+.blob2 { bottom: 10%; right: 10%; }
+
+/* Glass effect */
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+}
+
+/* Navbar */
+.navbar {
+    margin: 20px;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d17bff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #d17bff;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #d17bff, #7f00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.hero p {
+    margin-top: 15px;
+    color: #cfcfcf;
+}
+
+/* Glow Button */
+.glow-btn {
+    margin-top: 30px;
+    padding: 14px 35px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #7f00ff, #d17bff);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(209, 123, 255, 0.6);
+    transition: 0.3s;
+}
+
+.glow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(209, 123, 255, 0.9);
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+/* Feature Card */
+.feature-card {
+    width: 260px;
+    padding: 25px;
+    transition: 0.45s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.feature-card:hover {
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 0 40px rgba(176, 38, 255, 0.6);
+}
+
+/* Window dots */
+.align {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.align span {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+}
+
+.red { background: #ff605c; }
+.yellow { background: #ffbd44; }
+.green { background: #00ca4e; }
+
+/* Feature heading */
+.feature-card h2 {
+    text-align: center;
+    margin-bottom: 14px;
+    background: linear-gradient(90deg, #d17bff, #7f00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+/* Footer */
+footer {
+    margin: 40px 20px;
+    padding: 15px;
+    text-align: center;
+    color: #bdbdbd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .feature-card {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+/* ===============================
+   UIVERSE-STYLE FEATURE CARDS
+   =============================== */
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+/* Main Card */
+.uiverse-feature {
+    width: 250px;
+    height: 180px;
+    padding: 0.6rem;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border-radius: 12px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.35);
+    border-left: 2px solid rgba(255, 255, 255, 0.45);
+
+    box-shadow: -40px 50px 30px rgba(0, 0, 0, 0.35);
+
+    transform: skewX(10deg);
+    transition: all 0.4s ease;
+
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+}
+
+/* Expand on hover */
+.uiverse-feature:hover {
+    height: 260px;
+    transform: skewX(0deg);
+    box-shadow: 0 0 40px rgba(176, 38, 255, 0.6);
+}
+
+/* Window dots */
+.align {
+    padding: 1rem;
+    display: flex;
+    gap: 6px;
+}
+
+.align span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff605c;
+}
+
+.yellow {
+    background: #ffbd44;
+}
+
+.green {
+    background: #00ca4e;
+}
+
+/* Heading */
+.uiverse-feature h2 {
+    text-align: center;
+    margin: 1.0rem 0;
+    font-size: 25px;
+
+    background: linear-gradient(90deg, #d17bff, #7f00ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    text-shadow: -8px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Hidden paragraph */
+.uiverse-feature p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 10px;
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.35s ease;
+
+    color: #e0e0e0;
+}
+
+/* Reveal text on hover */
+.uiverse-feature:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+@media (max-width: 768px) {
+    .uiverse-feature {
+        width: 90%;
+        max-width: 320px;
+    }
+}
+
+
+
+
+/* ===============================
+   COMMON INNER PAGE STYLES
+   =============================== */
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px;
+}
+
+.page-card {
+    width: 100%;
+    max-width: 700px;
+    padding: 40px;
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 40px rgba(176, 38, 255, 0.4);
+
+    text-align: center;
+}
+
+.page-card h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+
+    background: linear-gradient(90deg, #d17bff, #7f00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.page-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #dcdcdc;
+}
+
+
+    
